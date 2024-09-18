@@ -1,0 +1,255 @@
+
+
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    background-image: url(imagenes/fondo.png);
+    background-size: contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+}
+
+body>div{
+    user-select: none;
+}
+
+.titulo{
+    width: 50%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu{
+    width: 50%;
+    height: 40%;
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.menu>div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pjs{
+    width: 50%;
+    height: 100%;
+}
+
+.botones{
+    width: 100%;
+    height: 100%;
+    flex-flow: column;
+    gap: 20px;
+}
+
+.botones>div{
+    background-color: greenyellow;
+    opacity: 70%;
+    font-size: 40px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.boton1 , .boton2{
+    width: 70%;
+    height: auto;
+}
+
+.boton3{
+    width: 30%;
+    height: auto;
+}
+
+.boton3>img{
+    width: 40%;
+    height: auto;
+}
+
+.instrucciones{
+    width: 60%;
+    height: 70%;
+    opacity: 90%;
+    color: white;
+    font-size: 20px;
+    text-align: justify;
+    background-color: black;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+}
+
+.instrucciones>img{
+    opacity: 100%;
+}
+
+.botoncerrar{    
+    width: 50%;
+    height: auto;
+    font-size: 40px;
+    background-color: greenyellow;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 70%;
+}
+
+.botoncerrar:hover{
+    animation: seleccionar_2 1s forwards, presionar 1s infinite;
+}
+.boton1:hover{
+    animation: seleccionar 1s forwards, presionar 1s infinite;
+}
+.boton2:hover{
+    animation: seleccionar 1s forwards, presionar 1s infinite;
+}
+.boton3:hover{
+    animation: seleccionar_3 1s forwards, presionar 1s infinite;
+}
+
+@keyframes seleccionar {
+    0%{
+        width: 70%;
+    }
+    25%{
+        width: 70%;
+    }
+    50%{
+        width: 100%;
+    }
+    75%{
+        width: 100%;
+    }
+    100%{
+        width: 100%;
+    }
+}
+
+@keyframes seleccionar_2 {
+    0%{
+        width: 50%;
+    }
+    50%{
+        width: 70%;
+    }
+    100%{
+        width: 70%;
+    }
+}
+
+@keyframes seleccionar_3 {
+    0%{
+        width: 30%;
+    }
+    50%{
+        width: 35%;
+    }
+    100%{
+        width: 35%;
+    }
+}
+
+@keyframes presionar {
+    0%{
+        opacity: 100%;
+    }
+    25%{
+        opacity: 0%;
+    }
+    50%{
+        opacity: 100%;
+    }
+    75%{
+        opacity: 0%;
+    }
+    100%{
+        opacity: 100%;
+    }
+}
+
+@keyframes detener {
+    0%{
+        opacity: 100%;
+    }
+    100%{
+        opacity: 100%;
+    }
+    
+}
+
+@keyframes fondo {
+    0%{
+        background-image: url(imagenes/fondo.png);
+    }
+
+    100%{
+        background-image: url(img/cesped2.png);
+    }
+}
+
+@keyframes fondoevil {
+    0%{
+        background-image: url(img/cesped2.png);
+    }
+    
+    100%{
+        background-image: url(imagenes/fondo.png);
+    }
+}
+
+@keyframes des_menu {
+    0%{
+        opacity: 100%;
+    }
+    50%{
+        opacity: 70%;
+    }
+    100%{
+        opacity: 0%;
+        display: none;
+    }
+}
+
+@keyframes aparecer {
+    0%{
+        opacity: 0%;
+    }
+    50%{
+        opacity: 0%;
+    }
+    100%{
+        opacity: 90%;
+    }
+}
+
+@keyframes aparecer_2 {
+    0%{
+        opacity: 0%;
+    }
+    50%{
+        opacity: 0%;
+    }
+    100%{
+        opacity: 100%;
+    }
+}

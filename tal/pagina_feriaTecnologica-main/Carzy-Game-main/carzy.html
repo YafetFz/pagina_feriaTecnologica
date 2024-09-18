@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Linking the CSS file for the menu and the game. -->
+    <link rel="stylesheet" href="css/styleforgame.css">
+    <link rel="stylesheet" href="css/styleformenu.css">
+
+    <!-- Linking the JavaScript file for the menu and the game. -->
+    <script id="game"></script>
+    <script type="module" src="javascript/scriptformenu.js"></script>
+
+    <!-- Page Icon. -->
+    <link rel="shortcut icon" href="sources/CarreraF1Logo.png">
+
+    <!-- Page Font. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+
+
+    <!-- Page Title. -->
+    <title>Carzy Game</title>
+</head>
+<body>
+    <!-- Audio -->
+    <audio id="gameTheme" src="sources/gameSoundTrackTheme.mp3" loop></audio>
+    <audio id="gameOver" src="sources/gameOver_crashSoundEffect.mp3"></audio>
+    <audio id="gameStart" src="sources/gameStart.mp3"></audio>
+
+    <audio id="menuTheme" src="sources/menuSoundTrackTheme.mp3" loop></audio>
+    
+    <!-- Score Table. -->
+    <div class="scoreTable">
+        <header> Tabla De Puntuación </header>
+        <div class="information">
+            <label class="title">Puntuación</label>
+            <div class="score">0 pts</div>
+
+            <label class="title">Combustible</label>
+            <div class="fuel">0 %</div>
+        </div>
+    </div>
+
+    <!-- Ingame Menú. -->
+    <nav id="ingameMenu">
+        <li>☰</li>
+        <li>Menú</li>
+        <li id="pauseButton">Pausa</li>
+    </nav>
+
+    <!-- Point Collector -->
+    <div class="pointCollector"></div>
+
+    <!-- Car. -->
+    <div class="userCar"></div>
+
+    <!-- Overlay. -->
+    <div class="overlay">
+        <div class="message">
+            <header></header>
+            <p></p>
+        </div>
+    </div>
+
+    <!-- Menu. -->
+    <div class="menu">
+        <div class="cielo"></div>
+        <div class="carretera"></div>
+        <div class="auto">
+            <div class="rueda rueda-delantera"></div>
+            <div class="rueda rueda-trasera"></div>
+        </div>
+        <div class="nube nube1"></div>
+        <div class="nube nube2"></div>
+        <div class="nube nube3"></div>
+        <div class="nube nube4"></div>
+        <div class="nube nube5"></div>
+        <div class="sol"></div>
+        <div class="cortina"></div>
+        
+        <div class="botones">
+            <!--Botones del menu-->
+            <div class="iniciar"></div>
+            <div class="autos"></div>
+            <div class="dificultad"></div>
+
+            <!-- caja para elegir dificultad-->
+            <div class="caja-dificultad">
+            <div class="modo facil">Fácil</div>
+            <div class="modo medio">Media</div>
+            <div class="modo dificil">Difícil</div>
+            <div class="dificultadSeleccionada">F</div>
+        </div>
+         
+        <!--Opciones para elegir el carro-->  
+        <div class="carSelector">
+            <div class="prev"><b><</b></div>
+            <div class="carsSkins">
+                <div class="carSkin"></div>
+            </div>
+            <div class="next"><b>></b></div>
+        </div>
+
+        <!--- Boton de Aceptar, Para elegir un carro  --->
+        <div class="aceptar">Aceptar</div>
+
+        <div class="settings"></div>
+            <!--- Menu de volumen  --->
+            <div id="sound-settings-menu" class="mini-menu">
+                <label for="volume-control">Volumen:</label>
+                <input type="range" id="volume-control" min="0" max="1" step="0.1" value="0.5"><br><br>
+                <button id="sound-on" class="active">Activar</button>
+                <button id="sound-off" class="desactive">Desactivar</button>
+            </div>
+       </div> 
+          
+    </div>
+</body>
+</html>

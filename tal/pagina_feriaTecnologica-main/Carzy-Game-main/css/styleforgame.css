@@ -1,0 +1,268 @@
+/* Reset Values. */
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+
+    font-family: "Pixelify Sans", sans-serif;
+}
+
+/* Game Background. */
+body{
+    /* Size. */
+    height: 100vh;
+    width: 100%;
+
+    /* Background. */
+    background: url(../sources/NIVELF-MASTER.png) center;
+    background-size: contain;
+
+    /* Positioning. */
+    position: relative;
+    overflow: hidden;
+}
+
+/* Score Table. */
+.scoreTable{
+    /* Size. */
+    height: 200px;
+    width: 150px;
+
+    /* Font. */
+    font-weight: bold;
+    color: white;
+
+    /* Background. */
+    background: #dfab00C1;
+
+    /* Positioning. */
+    position: absolute;
+    top: calc(50% - 100px);
+    right: 50px;
+
+    /* Elements in the score table */
+    header{
+        /* Size. */
+        height: 20%;
+        width: 100%;
+
+        /* Font. */
+        text-shadow: 2px 2px darkred;
+        font-size: 10pt;
+
+        /* Alignment. */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .information{
+        /* Size. */
+        height: 80%;
+        width: 100%;
+        padding: 10px;
+
+        /* Font. */
+        font-size: 10pt;
+        .title{
+            text-shadow: 2px 2px black;
+        }
+
+        /* Alignment. */
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-content: space-around;
+
+        .score, .fuel{
+            /* Size. */
+            height: 20%;
+            width: 60%;
+
+            /* Color. */
+            color: black;
+
+            /* Background. */
+            background: white;
+            border: 3px dashed red;
+
+            /* Alignment. */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}
+
+/* In-Game Menu. */
+nav{
+    /* Size. */
+    height: 100vh;
+    width: 35px;
+
+    /* Background. */
+    background: #DFAB00;
+
+    /* Text. */
+    font-size: 16pt;
+    font-weight: bolder;
+
+    /* Positioning. */
+    position: sticky;
+    left: 0;
+
+    /* Alignment. */
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+
+    /* Elements In Nav. */
+    li{
+        /* Size */
+        height: 100px;
+        width: 100%;
+
+        /* Dot hide. */
+        list-style: none;
+
+        /* Alignment */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        /* Cursor */
+        cursor: pointer;
+
+    }
+
+    li:nth-child(1){
+        /* Alignment. */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    li:nth-child(2), li:nth-child(3){
+        /* Display. */
+        display: none;
+    }
+
+    li:nth-child(2):hover, li:nth-child(3):hover{
+        background: #9F7A00;
+    }
+
+    /* Transition */
+    transition: all 1s;
+}
+
+/* User Car. */
+.userCar{
+    /* Size. */
+    height: 90px;
+    width: 48px;
+
+    /* Background. */
+    background: url(../sources/car3.png);
+    background-size: cover;
+    
+    /* Positioning. */
+    display: none;
+    position: absolute;
+    z-index: 1000;
+}
+
+/* Point Collector. */
+.pointCollector{
+    /* Size. */
+    height: 20vh;
+    width: 30%;
+
+    /* Positioning. */
+    position: absolute;
+    right: calc(50% - 15% + 5px);
+    bottom: 0px;
+}
+
+/* otherCars */
+.notUserCar{
+    /* Size. */
+    height: 150px;
+    width: 80px;
+
+    /* Positioning. */
+    position: absolute;
+
+    /* Putting the cars in the correct line. */
+    transform: rotate(180deg);
+    
+    /* Transitions */
+    transition: all 0.1s;
+}
+
+.overlay{
+    /* Size. */
+    height: 100%;
+    width: 100%;
+
+    /* Background. */
+    background: #000000Ac;
+
+    /* Positioning. */
+    position: absolute;
+    top:0px;
+    left: 0px;
+
+    /* Display and alignment. */
+    display: none;
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+
+    /* Elements in overlay. */
+    .message{
+        /* Size. */
+        height: 40vh;
+        width: 60vh;
+
+        /* Background. */
+        background: #DFAB00;
+        border-radius: 10px;
+
+        /* Elements in message. */
+        header{
+            /* Size. */
+            height: 60%;
+            width: 100%;
+
+            /* Font */
+            text-shadow: 5px 5px black;
+            font-weight: bolder;
+            text-align: center;
+            font-size: 48pt;
+            color: white;
+
+            /* Alignment */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        p{
+            /* Size */
+            height: 40%;
+            width: 100%;
+
+            /* Alignment */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            b{
+                color: white;
+                text-shadow: 1px 1px red;
+                margin: 5px;
+            }
+        }
+    }
+}

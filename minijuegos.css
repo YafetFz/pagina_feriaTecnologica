@@ -1,0 +1,251 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #003366, #00509e);
+    color: #f0f8ff;
+    overflow-x: hidden;
+}
+
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: #00264d;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 80px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    color: #f0f8ff;
+    margin: 0 15px;
+    position: relative;
+}
+
+.nav-item img {
+    width: 35px;
+    height: 35px;
+    margin-right: 10px;
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: #f0f8ff;
+    font-size: 16px;
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+.nav-item a:hover {
+    color: #aeeeee;
+}
+
+.nav-item::before {
+    content: "";
+    position: absolute;
+    background: #00509e;
+    opacity: 0;
+    width: 0;
+    height: 100%;
+    left: 0;
+    transition: width 0.3s, opacity 0.3s;
+}
+
+.nav-item:hover::before {
+    width: 100%;
+    opacity: 0.3;
+}
+
+main {
+    width: 90%;
+    margin: 20px auto;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.intro {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.intro h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.descripcion {
+    font-size: 18px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.materiales {
+    margin-bottom: 40px;
+}
+
+.materiales h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #00509e;
+    padding-bottom: 10px;
+}
+
+.materiales ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.materiales li {
+    margin-bottom: 10px;
+}
+
+.video {
+    margin-bottom: 40px;
+}
+
+.video h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #00509e;
+    padding-bottom: 10px;
+}
+
+.video-container {
+    margin-bottom: 20px;
+}
+
+.video iframe {
+    width: 100%;
+    height: 315px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.pasos {
+    margin-top: 20px;
+}
+
+.pasos ul {
+    list-style-type: decimal;
+    padding-left: 20px;
+}
+
+.pasos li {
+    margin-bottom: 10px;
+}
+
+
+.card-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 30px auto;
+    max-width: 1200px;
+}
+
+.card {
+    background: rgba(0, 0, 0, 0.8);
+    color: #f0f8ff;
+    border-radius: 10px;
+    width: 500px; 
+    height: 300px; 
+    margin: 20px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 20px;
+    text-align: center;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.7);
+}
+
+.card h2 {
+    font-size: 32px; 
+    margin: 10px 0;
+}
+
+.card p {
+    font-size: 20px; 
+    margin: 10px 0;
+}
+
+.card .btn {
+    display: block;
+    background: #00509e;
+    color: #f0f8ff;
+    text-align: center;
+    text-decoration: none;
+    padding: 15px 30px; 
+    border-radius: 5px;
+    transition: background 0.3s ease;
+    margin-top: 20px;
+}
+
+.card .btn:hover {
+    background: #003366;
+}
+
+
+@media (max-width: 768px) {
+    .menu {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .nav-item {
+        margin: 10px 0;
+    }
+
+    .nav-item img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .nav-item a {
+        font-size: 14px;
+    }
+
+    main {
+        width: 95%;
+    }
+
+    .intro h1 {
+        font-size: 28px;
+    }
+
+    .descripcion {
+        font-size: 16px;
+    }
+
+    .card-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+        height: auto; 
+    }
+}

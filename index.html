@@ -4,53 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="pagina1.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
-    <script src="pagina1.js"></script>
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <title></title>
+    <link rel="icon" href="img/casa.png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>Mini Arduino CNC</title>
 </head>
 <body>
-    <div class="menu">
-        <div class="nav"><img src="img/casa.png" alt="home"><a href="">Home</a></div>
-        <div class="nav"><img src="img/mando.png" alt="Game"><a href="">Game</a></div>
-        <div class="nav"><img src="img/cubos.png" alt="Minigames"><a href="">Minigames</a></div>
-    </div>
+    <header>
+        <nav class="menu">
+            <div class="nav-item"><img src="img/casa.png" alt="home"><a href="index.html">Home</a></div>
+            <div class="nav-item"><img src="img/mando.png" alt="Game"><a href="game.html">Game</a></div>
+            <div class="nav-item"><img src="img/cubos.png" alt="Minigames"><a href="minijuegos.html">Minigames</a></div>
+        </nav>
+    </header>
 
-    <h1>Mini Arduino CNC</h1>
-    <div class="descripcion">
-        El arduino CNC fue hecho con un Arduino UNO y puede usarlo para fresar madera delgada, diferentes espumas o puede usarlo para trazar diferentes bocetos y también se puede usar para fines de grabado y grabado.
-    </div>
+    <main>
+        <section class="intro">
+            <h1>Mini Arduino CNC</h1>
+            <p class="descripcion">
+                El Arduino CNC fue creado con un Arduino UNO y puede utilizarse para fresar madera delgada, espumas, trazar bocetos y también para fines de grabado.
+            </p>
+        </section>
 
-    <h1>Materiales Necesarios</h1>
-    <div class="materiales">
-        <ul>
-            <li>3 CD/DVD-Roms antiguos (para los motores paso a paso)</li>
-            <li>1 Fuente de alimentación de computadora</li>
-            <li>3 Tablas Easydriver</li>
-            <li>1 Arduino UNO</li>
-            <li>2 piezas de madera</li>
-            <li>1 Soldador</li>
-            <li>1 Alambre de soldar</li>
-        </ul>
-    </div>
+        <section class="materiales">
+            <h2>Materiales Necesarios</h2>
+            <ul>
+                <li>3 CD/DVD-Roms antiguos (para los motores paso a paso)</li>
+                <li>1 Fuente de alimentación de computadora</li>
+                <li>3 Tablas Easydriver</li>
+                <li>1 Arduino UNO</li>
+                <li>2 piezas de madera</li>
+                <li>1 Soldador</li>
+                <li>1 Alambre de soldar</li>
+            </ul>
+        </section>
 
-    <h1>Pasos Básicos</h1>
-    <div class="video">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/EZZg1QBYzJA?si=C4D5xaQOkBtLmfD2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    </div>
-    <div class="pasos">
-        <ul>
-            <li>Mira el video de demostración para ver el CNC en acción.</li>
-            <li>Desmonta 3 unidades de CD/DVD-Rom para extraer los motores paso a paso necesarios para los ejes X, Y y Z.</li>
-            <li>Arma una base de madera y fija los pilares de aluminio. Ensambla los ejes X y Y asegurándote de que estén perpendiculares entre sí.</li>
-            <li>Suelda los cables a los motores paso a paso y conéctalos a las tablas Easydriver. Usa un soldador de baja potencia para evitar daños.</li>
-            <li>Descarga e instala el software Arduino y la biblioteca Grbl.
-                Sube la biblioteca a tu Arduino y configura el controlador Grbl para ajustar las opciones y direcciones de los motores.
-                Usa Inkscape para generar Gcodes y prueba con DeskEngrave para crear tus diseños.
-            </li>
-        </ul>
-    </div>
+        <section class="video">
+            <h2>Pasos Básicos</h2>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/EZZg1QBYzJA?si=C4D5xaQOkBtLmfD2" title="Video de demostración" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div class="pasos">
+                <ul>
+                    <li>Mira el video de demostración para ver el CNC en acción.</li>
+                    <li>Desmonta 3 unidades de CD/DVD-Rom para extraer los motores paso a paso necesarios para los ejes X, Y y Z.</li>
+                    <li>Arma una base de madera y fija los pilares de aluminio. Ensambla los ejes X y Y asegurándote de que estén perpendiculares entre sí.</li>
+                    <li>Suelda los cables a los motores paso a paso y conéctalos a las tablas Easydriver. Usa un soldador de baja potencia para evitar daños.</li>
+                    <li>Descarga e instala el software Arduino y la biblioteca Grbl. Sube la biblioteca a tu Arduino y configura el controlador Grbl para ajustar las opciones y direcciones de los motores. Usa Inkscape para generar Gcodes y prueba con DeskEngrave para crear tus diseños.</li>
+                </ul>
+            </div>
+        </section>
+    </main>
 </body>
 </html>
